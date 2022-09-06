@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/agregar_contacto"
+          android:title="Agregar Contactos"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/listado_contacto"
+          android:title="Listado de Contactos"
+          app:showAsAction="never"/>
+
+</menu>

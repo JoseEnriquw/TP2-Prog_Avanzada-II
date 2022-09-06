@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">EjercicioControles-Grupo3</string>
+    <string name="tv_formularioContacto">FORMULARIO DE CONTACTO</string>
+    <string name="tv_textoFormulario">Esto es un formulario destinado al registro de personas, sus datos personales e intereses</string>
+    <string name="tv_Nombre">NOMBRE</string>
+    <string name="et_Nombre">Nombre</string>
+    <string name="tv_Apellido">APELLIDO</string>
+    <string name="et_Apellido">Apellido</string>
+    <string name="tv_Telefono">TELÉFONO</string>
+    <string name="et_Telefono">Telefono</string>
+    <string name="tv_Email">EMAIL</string>
+    <string name="et_Email">Email</string>
+    <string name="tv_Direccion">DIRECCIÓN</string>
+    <string name="et_Direccion">Direccion</string>
+    <string name="tv_FechaNacimiento">FECHA DE NACIMIENTO</string>
+    <string name="et_FechaNacimiento">Fecha de nacimiento</string>
+    <string name="btnContinuar">CONTINUAR</string>
+</resources>
