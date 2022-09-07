@@ -15,4 +15,19 @@
     <string name="tv_FechaNacimiento">FECHA DE NACIMIENTO</string>
     <string name="et_FechaNacimiento">Fecha de nacimiento</string>
     <string name="btnContinuar">CONTINUAR</string>
+    <string name="tv_a_continuacion_mas_datos">A continuación, por favor se pide completar más datos personales.</string>
+    <string name="tv_nivel_estudio">NIVEL DE ESTUDIOS ALCANZADOS</string>
+    <string name="rb_primario_in">Primario incompleto</string>
+    <string name="rb_primario_c">Primario completo</string>
+    <string name="rb_secundario_in">Secundario incompleto</string>
+    <string name="rb_secundario_c">Secundario completo</string>
+    <string name="rb_otros">Otros</string>
+    <string name="tv_intereses">Intereses</string>
+    <string name="cb_deporte">Deporte</string>
+    <string name="cb_musica">Musica</string>
+    <string name="cb_arte">Arte</string>
+    <string name="cb_tecnologia">Tecnologia</string>
+    <string name="tv_desea_recibir">Desea Recibir Informacion?</string>
+    <string name="switch_si">si</string>
+    <string name="btn_guardar">guardar</string>
 </resources>

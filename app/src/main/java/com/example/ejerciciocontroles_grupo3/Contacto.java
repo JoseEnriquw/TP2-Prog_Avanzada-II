@@ -2,6 +2,7 @@ package com.example.ejerciciocontroles_grupo3;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Contacto implements Serializable {
     private String nombre;
@@ -9,12 +10,15 @@ public class Contacto implements Serializable {
     private String telefono;
     private String email;
     private String direccion;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
+    private String nivelEstudioAlcanzado;
+    private List<String> intereses;
+    private Boolean recibirInf;
 
     public Contacto() {
     }
 
-    public Contacto(String nombre, String apellido, String telefono, String email, String direccion, Date fechaNacimiento) {
+    public Contacto(String nombre, String apellido, String telefono, String email, String direccion, String fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -63,12 +67,36 @@ public class Contacto implements Serializable {
         this.direccion = direccion;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getNivelEstudioAlcanzado() {
+        return nivelEstudioAlcanzado;
+    }
+
+    public void setNivelEstudioAlcanzado(String nivelEstudioAlcanzado) {
+        this.nivelEstudioAlcanzado = nivelEstudioAlcanzado;
+    }
+
+    public List<String> getIntereses() {
+        return intereses;
+    }
+
+    public void setIntereses(List<String> intereses) {
+        this.intereses = intereses;
+    }
+
+    public Boolean getRecibirInf() {
+        return recibirInf;
+    }
+
+    public void setRecibirInf(Boolean recibirInf) {
+        this.recibirInf = recibirInf;
     }
 
     @Override
@@ -80,6 +108,9 @@ public class Contacto implements Serializable {
                 ", email='" + email + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
+                ", nivelEstudioAlcanzado='" + nivelEstudioAlcanzado + '\'' +
+                ", intereses=" + intereses +
+                ", recibirInf=" + recibirInf +
                 '}';
     }
 }
