@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.Serializable;
@@ -32,9 +34,15 @@ public class AgregarContacto extends AppCompatActivity {
 
     public void Continuar(View view)
     {
-        Contacto contacto=new Contacto();
+        String nombre=((EditText)findViewById(R.id.et_Nombre)).getText().toString();
+        String apellido=((EditText)findViewById(R.id.et_Apellido)).getText().toString();
+        String telefono=((EditText)findViewById(R.id.et_Telefono)).getText().toString();
+        String email=((EditText)findViewById(R.id.et_Email)).getText().toString();
+        String direccion=((EditText)findViewById(R.id.et_Direccion)).getText().toString();
+        String fecha=((EditText)findViewById(R.id.et_FechaNacimiento)).getText().toString();
+        Contacto contacto=new Contacto(nombre,apellido,telefono,email,direccion,fecha);
 
-        Intent intent=new Intent(this,ListadoContacto.class);
+        Intent intent=new Intent(this,FormularioMasDatosContacto.class);
         intent.putExtra("contacto", contacto);
         startActivity(intent);
     }
