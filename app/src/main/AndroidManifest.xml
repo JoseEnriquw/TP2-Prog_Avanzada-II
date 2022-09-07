@@ -17,6 +17,9 @@
             android:name=".FormularioMasDatosContacto"
             android:exported="false" />
         <activity
+            android:name=".MasDetalles"
+            android:exported="false" />
+        <activity
             android:name=".ListadoContacto"
             android:exported="false" />
         <activity

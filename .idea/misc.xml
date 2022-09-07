@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UTN/TUSI/PROGRAMACION AVANZADA II/TP2-Prog_Avanzada-II/app/src/main/res/layout/activity_listado_contacto.xml" value="0.33" />
+        <entry key="..\:/UTN/TUSI/PROGRAMACION AVANZADA II/TP2-Prog_Avanzada-II/app/src/main/res/layout/activity_main.xml" value="0.17447916666666666" />
+        <entry key="..\:/UTN/TUSI/PROGRAMACION AVANZADA II/TP2-Prog_Avanzada-II/app/src/main/res/layout/activity_mas_detalles.xml" value="0.33" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/TP2-Prog_Avanzada-II/app/src/main/res/layout/activity_agregar_contacto.xml" value="0.264" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/TP2-Prog_Avanzada-II/app/src/main/res/layout/activity_listado_contacto.xml" value="0.23278985507246377" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/TP2-Prog_Avanzada-II/app/src/main/res/layout/activity_mas_datos_contacto.xml" value="0.23505434782608695" />
