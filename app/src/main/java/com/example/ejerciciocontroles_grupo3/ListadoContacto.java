@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,25 +12,40 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListadoContacto extends AppCompatActivity {
 
     private ListView Listvw;
-    private TextView tv1;
-
-    private String Listado [] = {"enrique", "regina", "laura", "ivan", "pablo"};
+    private List<Contacto> listContacto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_contacto);
-        Toast.makeText(this,"este es listado contacto",Toast.LENGTH_SHORT).show();
-        Contacto contacto=(Contacto)getIntent().getSerializableExtra("contacto");
-        if(contacto!=null)
-        Toast.makeText(this,contacto.toString(),Toast.LENGTH_LONG).show();
 
         Listvw=(ListView)findViewById(R.id.ListView);
+        listContacto=new ArrayList<>();
+        try {
+            FileInputStream leeArch = new FileInputStream (new File(getFilesDir(),Utils.nombreArchivo));
+            ObjectInputStream streamArch = new ObjectInputStream (leeArch);
+            // Leo todo y lleno la lista
+            listContacto = (ArrayList<Contacto>) streamArch.readObject();
+            // Cierro el stream
+            streamArch.close();
+        }catch (ClassNotFoundException | FileNotFoundException e){
+            Log.e("MainActivity", "Error clase no encontrada");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, Listado);
+        ArrayAdapter<Contacto> adapter = new ArrayAdapter<>( this, android.R.layout.simple_list_item_1,listContacto);
         Listvw.setAdapter(adapter);
 
 

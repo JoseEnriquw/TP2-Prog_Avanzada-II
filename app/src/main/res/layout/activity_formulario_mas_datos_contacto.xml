@@ -117,6 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:onClick="Guardar"
         android:text="@string/btn_guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,12 +143,14 @@
                 android:id="@+id/cbDeporte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="addIntereses"
                 android:text="@string/cb_deporte" />
 
             <CheckBox
                 android:id="@+id/cbMusica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="addIntereses"
                 android:text="@string/cb_musica" />
         </TableRow>
 
@@ -159,12 +162,14 @@
                 android:id="@+id/cbArte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="addIntereses"
                 android:text="@string/cb_arte" />
 
             <CheckBox
                 android:id="@+id/cbTecnologia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="addIntereses"
                 android:text="@string/cb_tecnologia" />
         </TableRow>
 
