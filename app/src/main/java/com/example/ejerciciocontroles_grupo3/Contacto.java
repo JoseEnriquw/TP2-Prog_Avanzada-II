@@ -7,8 +7,8 @@ import java.util.List;
 public class Contacto implements Serializable {
     private String nombre;
     private String apellido;
-    private String telefono;
-    private String email;
+    private DatoContacto telefono;
+    private DatoContacto email;
     private String direccion;
     private String fechaNacimiento;
     private String nivelEstudioAlcanzado;
@@ -18,7 +18,7 @@ public class Contacto implements Serializable {
     public Contacto() {
     }
 
-    public Contacto(String nombre, String apellido, String telefono, String email, String direccion, String fechaNacimiento) {
+    public Contacto(String nombre, String apellido, DatoContacto telefono, DatoContacto email, String direccion, String fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -43,19 +43,19 @@ public class Contacto implements Serializable {
         this.apellido = apellido;
     }
 
-    public String getTelefono() {
+    public DatoContacto getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(DatoContacto telefono) {
         this.telefono = telefono;
     }
 
-    public String getEmail() {
+    public DatoContacto getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(DatoContacto email) {
         this.email = email;
     }
 
@@ -101,16 +101,7 @@ public class Contacto implements Serializable {
 
     @Override
     public String toString() {
-        return "Contacto{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", email='" + email + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", nivelEstudioAlcanzado='" + nivelEstudioAlcanzado + '\'' +
-                ", intereses=" + intereses +
-                ", recibirInf=" + recibirInf +
-                '}';
+        return  nombre +" "+ apellido +
+                "-" + email;
     }
 }

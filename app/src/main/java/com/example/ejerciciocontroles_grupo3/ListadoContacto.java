@@ -54,7 +54,7 @@ public class ListadoContacto extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
               String variable =  Listvw.getItemAtPosition(i).toString();
 
-                AbrirVentana(variable);
+                AbrirVentana((Contacto) Listvw.getItemAtPosition(i));
 
 
             }
@@ -67,8 +67,9 @@ public class ListadoContacto extends AppCompatActivity {
     }
 
 
-    public void AbrirVentana(String nombre){
+    public void AbrirVentana(Contacto contacto){
         Intent masdetalles = new Intent(this, MasDetalles.class);
-        masdetalles.putExtra("name",nombre);
+        masdetalles.putExtra("contacto",contacto);
+        startActivity(masdetalles);
     }
 }

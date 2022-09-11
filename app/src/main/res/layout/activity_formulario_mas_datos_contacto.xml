@@ -28,7 +28,9 @@
             android:id="@+id/rbPrimarioIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rb_primario_in" />
+            android:text="@string/rb_primario_in"
+            android:checked="true"
+            />
 
         <RadioButton
             android:id="@+id/rbPrimarioC"

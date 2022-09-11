@@ -49,8 +49,7 @@ public class FormularioMasDatosContacto extends AppCompatActivity {
             intereses.remove(cb.getText().toString());
         }
     }
-    public void Guardar(View view)
-    {
+    public void Guardar(View view){
         int id=((RadioGroup)findViewById(R.id.radioGroup)).getCheckedRadioButtonId();
         contacto.setNivelEstudioAlcanzado(((RadioButton)findViewById(id)).getText().toString());
         contacto.setRecibirInf(((Switch)findViewById(R.id.switchSi)).isChecked());
@@ -71,7 +70,7 @@ public class FormularioMasDatosContacto extends AppCompatActivity {
             Intent intent=new Intent(this,MainActivity.class);
             startActivity(intent);
 
-        }catch (ClassNotFoundException e ){
+        }catch (Exception e){
             try{
                 FileOutputStream escribirArch = new FileOutputStream(new File(getFilesDir(),Utils.nombreArchivo));
                 ObjectOutputStream streamArch = new ObjectOutputStream(escribirArch);
@@ -83,8 +82,6 @@ public class FormularioMasDatosContacto extends AppCompatActivity {
             }catch (IOException ex){
                 Toast.makeText(this,"Error al guardar el archivo",Toast.LENGTH_LONG).show();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
     }
